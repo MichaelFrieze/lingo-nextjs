@@ -1,3 +1,31 @@
+_This app is from CodeWithAntonio's course where we build a [Duolingo Clone](https://github.com/AntonioErdeljac/next14-duolingo-clone)._
+
+Key Features:
+
+- 🌐 Next.js 14, App Router, RSCs, & Server Actions
+- 🗣 AI Voices using Elevenlabs AI
+- 🎨 Component system using Shadcn UI
+- 🎭 Characters from KenneyNL
+- 🔐 Auth using Clerk
+- 🔊 Sound effects
+- ❤️ Hearts system
+- 🌟 Points / XP system
+- 💔 No hearts left popup
+- 🚪 Exit confirmation popup
+- 🔄 Practice old lessons to regain hearts
+- 🏆 Leaderboard
+- 🗺 Quests milestones
+- 🛍 Shop system to exchange points with hearts
+- 💳 Pro tier for unlimited hearts using Stripe
+- 🏠 Landing page
+- 📊 Admin dashboard React Admin
+- 🌧 ORM using DrizzleORM
+- 💾 PostgresDB using NeonDB
+- 🚀 Deployment on Vercel
+- 📱 Mobile responsiveness
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
