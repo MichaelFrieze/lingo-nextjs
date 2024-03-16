@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: "Lingo",
   description:
     "Language learning app built with Next.js, App Router, Server Actions, Drizzle, Stripe, and Tailwind",
+  icons: [
+    {
+      url: "/mascot.svg",
+      href: "/mascot.svg",
+    },
+  ],
 };
 
 export default function RootLayout({
