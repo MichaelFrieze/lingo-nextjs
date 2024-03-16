@@ -1,4 +1,15 @@
 import Image from "next/image";
+import { Loader } from "lucide-react";
+import {
+  ClerkLoaded,
+  ClerkLoading,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +21,38 @@ export default function Home() {
         <h1 className="max-w-[480px] text-center text-xl font-bold text-neutral-600 lg:text-3xl">
           Learn, practice, and master new languages with Lingo.
         </h1>
-        <div className="flex w-full max-w-[330px] flex-col items-center gap-y-3"></div>
+        <div>
+          <ClerkLoading>
+            <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
+          </ClerkLoading>
+          <ClerkLoaded>
+            <SignedOut>
+              <SignUpButton
+                mode="modal"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
+              >
+                <Button size="lg" variant="secondary" className="w-full">
+                  Get Started
+                </Button>
+              </SignUpButton>
+              <SignInButton
+                mode="modal"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
+              >
+                <Button size="lg" variant="primaryOutline" className="w-full">
+                  I already have an account
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <Button size="lg" variant="secondary" className="w-full" asChild>
+                <Link href="/learn">Continue Learning</Link>
+              </Button>
+            </SignedIn>
+          </ClerkLoaded>
+        </div>
       </div>
     </div>
   );
